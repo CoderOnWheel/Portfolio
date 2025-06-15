@@ -1,0 +1,52 @@
+.navbar {
+  padding: 1rem 3rem;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  position: sticky !important;
+  z-index: 100;/*
+  margin-left: 310px;  Matches sidebar width */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  font-size: larger;
+  font-family: monospace;
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: 100;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #facc15;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #facc15;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
